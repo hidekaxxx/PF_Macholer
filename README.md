@@ -1,24 +1,41 @@
-# README
+# Macholer（マチョラー）
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+日々のトレーニングを楽しく管理し毎日チェックしたくなるサイトです！
+【機能紹介】
+・トレーニング内容を記録し、カレンダーで見やすく管理できる
+・友達機能：フォローした人の記録、投稿が見られる。
+・My GYM登録：同じジムに通うユーザーの投稿をまとめて見ることができ、トレーニング仲間を増やすことができる！
 
-Things you may want to cover:
+### サイトテーマ
+「日々のトレーニングを楽しく、繋がることでモチベーションを保つ」というテーマです。
 
-* Ruby version
 
-* System dependencies
+### テーマを選んだ理由
+パーソナルトレーナーである友人との会話から思いついた内容でしたが、自分自身のあったらいいなを形にしました。
+日々、トレーニングをする上で記録をするのは面倒で、続けるのはとtでも大変です。
+その記録を、twitterのような呟くようにポチッと投稿ができ
+さらにユーザー同士で繋がることによりモチベーションを落としにくいシンプルなものがあれば良いなと思いこのテーマを選びました。
 
-* Configuration
+### ターゲットユーザ
+トレーニング行う全ての人々。ですが主なターゲット層は、20代~40代のトレーニングを行う男女です。
 
-* Database creation
+### 主な利用シーン
+・日々のトレーニングを記録として残したい！→シンプルな記録できる
+・「トレーニンングを始めたいけど何をすれば良いかわからない...」そんな時の情報収集に！
+・「一緒にトレーニングする仲間が欲しい...」仲間探しに！
 
-* Database initialization
+## チャレンジ要素一覧
+https://docs.google.com/spreadsheets/d/1EggL4oRAcprE3LGeA2tLxE5Sf7COWcxpo97QLi9qdek/edit?usp=sharing
 
-* How to run the test suite
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-* Services (job queues, cache servers, search engines, etc.)
+## 使用素材
+- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
+- 使用しない場合は、使用素材の項目をREADMEから削除してください。
 
-* Deployment instructions
-
-* ...
