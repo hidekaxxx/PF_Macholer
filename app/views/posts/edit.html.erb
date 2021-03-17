@@ -5,6 +5,13 @@
     <%= form_tag("/posts/#{@post.id}/update") do %>
     　<div class="form">
       　<div class="form-body">
+      　 <!--空白の場合、エラーメッセージ-->
+      　   <% @post.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+
         　<textarea name="content"><%= @post.content %></textarea>
         　<input type="submit" value="保存">
       　</div>

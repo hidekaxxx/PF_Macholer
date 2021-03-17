@@ -19,13 +19,25 @@
           <%= link_to("Macholerとは", "/about") %>
         </li>
         <li>
-          <%= link_to("タイムライン", "/posts/index") %>
-　　　　</li>
-　　　　<li>
-　　　　  <%= link_to("新規投稿", "/posts/new") %>
-　　　　</li>
+          <%= link_to("Time Line", "/posts/index") %>
+        </li>
+        <li>
+          <%= link_to("新規投稿", "/posts/new") %>
+        </li>
+        <li>
+          <%= link_to("users", "/users/index") %>
+        </li>
+        <li>
+          <%= link_to("Sign Up", "/signup") %>
+        </li>
       </ul>
     </header>
+
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
 
     <%= yield %>
   </body>
