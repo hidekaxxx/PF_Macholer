@@ -9,12 +9,14 @@
             <%= message %>
           </div>
         <% end %>
-
+        <!--新規登録フォーム-->
         <%= form_tag("/users/create") do %>
         　<p>ユーザー名</p>
         　<input name="name" value="<%= @user.name %>">
         　<p>メールアドレス</p>
         　<input name="email" value="<%= @user.email %>">
+        　<p>パスワード</p>
+          <input type="password" name="password" value="<%= @user.password %>">
         　<input type="submit" value="Sign Up">
         <% end %>
       </div>

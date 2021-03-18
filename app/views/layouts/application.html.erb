@@ -12,24 +12,44 @@
   <body>
     <header>
       <div class="header-logo">
-        <%= link_to("Macholer", "/") %>
+        <!--ログイン時のリンク制限（ログイン時、非ログイン時のリンクに行くと制限される）-->
+        <% if @current_user %>
+          <%= link_to("Macholer", "/posts/index") %>
+        <% else %>
+          <%= link_to("Macholer", "/") %>
+        <% end %>
       </div>
       <ul class="header-menus">
-        <li>
-          <%= link_to("Macholerとは", "/about") %>
-        </li>
-        <li>
-          <%= link_to("Time Line", "/posts/index") %>
-        </li>
-        <li>
-          <%= link_to("新規投稿", "/posts/new") %>
-        </li>
-        <li>
-          <%= link_to("users", "/users/index") %>
-        </li>
-        <li>
-          <%= link_to("Sign Up", "/signup") %>
-        </li>
+
+        <% if @current_user %>
+          <li>
+            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+          </li>
+          <!-- ログイン時のヘッダー -->
+          <li>
+            <%= link_to("【Time Line】", "/posts/index") %>
+          </li>
+          <li>
+            <%= link_to("【Today's Training！】", "/posts/new") %>
+          </li>
+          <li>
+            <%= link_to("【Users】", "/users/index") %>
+          </li>
+          <li>
+            <%= link_to("【Logout】", "/logout", {method: "post"}) %>
+          </li>
+        <% else %>
+          <!-- 非ログイン時のヘッダー -->
+          <li>
+            <%= link_to("【Macholerとは】", "/about") %>
+          </li>
+          <li>
+            <%= link_to("【Sign UP】", "/signup") %>
+          </li>
+          <li>
+            <%= link_to("【Login】", "/login") %>
+          </li>
+        <% end %>
       </ul>
     </header>
 
