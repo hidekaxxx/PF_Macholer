@@ -19,7 +19,8 @@ class UsersController < ApplicationController
     @user = User.new(
       name: params[:name],
       email: params[:email],
-      image_name: "PF_users_inu.png",
+      # 初期ユーザー画像（画像設定していない時の画像）
+      image_name: "default_user.png",
       password: params[:password]
     )
     if @user.save
@@ -76,7 +77,7 @@ class UsersController < ApplicationController
     flash[:notice] = "ログアウトしました"
     redirect_to("/login")
   end
-  
+
   def ensure_correct_user
     if @current_user.id != params[:id].to_i
       flash[:notice] = "権限がありません"
